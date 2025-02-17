@@ -13,9 +13,9 @@ export const scrollToSection = (sectionId: string) => {
     section.scrollIntoView({ behavior: "smooth" });
   }
 };
+
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (isMenuOpen) {
@@ -28,7 +28,9 @@ export default function HeroSection() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMenuOpen]);
-
+  const handleTooggle = () => {
+    setIsMenuOpen(false);
+  };
   const menuItems = ["Home", "About", "Projects", "Contact"];
   const [transform, setTransform] = useState("");
   const [glarePosition, setGlarePosition] = useState({ x: 50, y: 50 });
@@ -165,6 +167,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <div className="" onClick={() => handleTooggle()}></div>
     </div>
   );
 }
