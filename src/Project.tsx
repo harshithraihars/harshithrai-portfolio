@@ -121,7 +121,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project}: ProjectCardProps) {
   const icons = {
     web: <FaGlobe className="w-6 h-6" />,
     wordpress: <FaWordpress className="w-6 h-6" />,
