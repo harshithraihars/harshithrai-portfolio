@@ -3,6 +3,7 @@ import { FaCode, FaEnvelope } from "react-icons/fa";
 import ProfileImg from "./img/Profile.jpg";
 import { TypeAnimation } from "react-type-animation";
 import { trefoil } from "ldrs";
+import AnimateOnScroll from "./AnimateScroll";
 
 trefoil.register();
 
@@ -28,9 +29,11 @@ export default function HeroSection() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMenuOpen]);
+  
   const handleTooggle = () => {
     setIsMenuOpen(false);
   };
+  
   const menuItems = ["Home", "About", "Projects", "Contact"];
   const [transform, setTransform] = useState("");
   const [glarePosition, setGlarePosition] = useState({ x: 50, y: 50 });
@@ -60,6 +63,7 @@ export default function HeroSection() {
     );
     setGlarePosition({ x: 50, y: 50 });
   };
+  
   return (
     <div
       id="home"
@@ -100,71 +104,85 @@ export default function HeroSection() {
         </nav>
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-80px)] mt-20 lg:mt-0">
           <div className="text-center lg:text-left lg:w-1/2 mb-4 lg:mb-0">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              Hi, I'm{" "}
-              <span className="text-cyan-300">
-                <TypeAnimation
-                  sequence={["Harshith Rai", 2000, ""]}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                />
-              </span>
-            </h1>
-            <p className="text-2xl md:text-2xl text-cyan-200 mb-4 animate-fade-in-up animation-delay-200">
-              Full-stack Developer
-            </p>
-            <p className="text-white text-lg mb-6 animate-fade-in-up animation-delay-400 max-w-2xl">
-              I craft beautiful, responsive, and user-friendly web applications.
-              With a passion for clean code and innovative design, I bring ideas
-              to life in the digital realm.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up animation-delay-600">
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="bg-white text-purple-700 hover:bg-cyan-100 px-6 py-3 rounded-full font-semibold flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                <FaCode className="mr-2" />
-                View My Work
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-700 px-6 py-3 rounded-full font-semibold flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105"
-              >
-                <FaEnvelope className="mr-2" />
-                Contact Me
-              </button>
-            </div>
+            <AnimateOnScroll delay={0}>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                Hi, I'm{" "}
+                <span className="text-cyan-300">
+                  <TypeAnimation
+                    sequence={["Harshith Rai", 2000, ""]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
+                </span>
+              </h1>
+            </AnimateOnScroll>
+            
+            <AnimateOnScroll delay={100}>
+              <p className="text-2xl md:text-2xl text-cyan-200 mb-4">
+                Full-stack Developer
+              </p>
+            </AnimateOnScroll>
+            
+            <AnimateOnScroll delay={200}>
+              <p className="text-white text-lg mb-6 max-w-2xl">
+                I craft beautiful, responsive, and user-friendly web applications.
+                With a passion for clean code and innovative design, I bring ideas
+                to life in the digital realm.
+              </p>
+            </AnimateOnScroll>
+            
+            <AnimateOnScroll delay={300}>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <button
+                  onClick={() => scrollToSection("projects")}
+                  className="bg-white text-purple-700 hover:bg-cyan-100 px-6 py-3 rounded-full font-semibold flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105"
+                >
+                  <FaCode className="mr-2" />
+                  View My Work
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-700 px-6 py-3 rounded-full font-semibold flex items-center justify-center transition duration-300 ease-in-out transform hover:scale-105"
+                >
+                  <FaEnvelope className="mr-2" />
+                  Contact Me
+                </button>
+              </div>
+            </AnimateOnScroll>
           </div>
-          <div className="lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-up animation-delay-800 mt-8 lg:mt-0">
-            <div
-              className="relative w-64 h-64 md:w-80 md:h-96 rounded-full md:rounded-[20px] overflow-hidden border-4 border-white md:border-none md:shadow-2xl shadow-lg tilt-box-wrap"
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              style={{
-                transition: "transform 0.2s ease-out",
-                transform: transform,
-              }}
-            >
-              <div className="tilt-box relative w-full h-full">
-                {/* Glare Effect */}
-                <div
-                  className="absolute inset-0 w-full h-full"
-                  style={{
-                    background: `radial-gradient(circle at ${glarePosition.x}% ${glarePosition.y}%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 80%)`,
-                    transition: "background 0.1s ease-out",
-                  }}
-                />
+          
+          <AnimateOnScroll delay={400}>
+            <div className="lg:w-full flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <div
+                className="relative w-64 h-64 md:w-80 md:h-96 rounded-full md:rounded-[20px] overflow-hidden border-4 border-white md:border-none md:shadow-2xl shadow-lg tilt-box-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  transition: "transform 0.2s ease-out",
+                  transform: transform,
+                }}
+              >
+                <div className="tilt-box relative w-full h-full">
+                  {/* Glare Effect */}
+                  <div
+                    className="absolute inset-0 w-full h-full"
+                    style={{
+                      background: `radial-gradient(circle at ${glarePosition.x}% ${glarePosition.y}%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 80%)`,
+                      transition: "background 0.1s ease-out",
+                    }}
+                  />
 
-                {/* Profile Image */}
-                <img
-                  src={ProfileImg}
-                  alt="Harshith Rai"
-                  className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-[20px] shadow-gray-500/50 bending-image"
-                />
+                  {/* Profile Image */}
+                  <img
+                    src={ProfileImg}
+                    alt="Harshith Rai"
+                    className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-[20px] shadow-gray-500/50 bending-image"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </div>
       <div className="" onClick={() => handleTooggle()}></div>
