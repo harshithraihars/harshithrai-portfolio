@@ -53,7 +53,7 @@ export default function ContactSection() {
 
   return (
     <section
-      id="contact"
+      // id="contact"
       className="py-20 bg-gradient-to-bl from-white via-black to-black"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

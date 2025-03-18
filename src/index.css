@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@300;400;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Big Shoulders Inline', sans-serif;
+}
+
+
 .animation-box {
   position: relative;
   z-index: 0; /* Ensures the gradient is behind the content */
@@ -92,68 +101,6 @@
 
 .animate-fade-in-up {
   animation: fade-in-up 0.5s ease-out;
-}
-/* Background gradient */
-/* Background gradient */
-/* Background gradient */
-.visit-github {
-  --primary-color: #4f4e4e;
-  --secondary-color: #F0F0F0;
-  --hover-color: #111;
-  --arrow-width: 10px;
-  --arrow-stroke: 2px;
-  box-sizing: border-box;
-  border: 0;
-  border-radius: 20px;
-  color: var(--secondary-color);
-  padding: 1em 1.6em;
-  background: var(--primary-color);
-  display: flex;
-  transition: 0.2s background;
-  align-items: center;
-  gap: 0.6em;
-  font-weight: bold;
-}
-
-.visit-github .arrow-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.visit-github .arrow {
-  margin-top: 1px;
-  width: var(--arrow-width);
-  background: var(--primary-color);
-  height: var(--arrow-stroke);
-  position: relative;
-  transition: 0.2s;
-}
-
-.visit-github .arrow::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  border: solid var(--secondary-color);
-  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-  display: inline-block;
-  top: -3px;
-  right: 3px;
-  transition: 0.2s;
-  padding: 3px;
-  transform: rotate(-45deg);
-}
-
-.visit-github:hover {
-  background-color: var(--hover-color);
-}
-
-.visit-github:hover .arrow {
-  background: var(--secondary-color);
-}
-
-.visit-github:hover .arrow:before {
-  right: 0;
 }
 .btn {
   margin-top: 10px;

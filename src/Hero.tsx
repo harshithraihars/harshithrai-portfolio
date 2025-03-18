@@ -73,12 +73,12 @@ export default function HeroSection() {
         <nav className="fixed top-0 left-4 right-12 z-50 bg-transparent backdrop-blur-sm flex justify-between items-center p-4 sm:p-9">
           <div className="flex justify-between items-center gap-4">
             <l-trefoil
-              size="30"
+              size="32"
               stroke="4"
               stroke-length="0.15"
               bg-opacity="0.2"
               speed="2"
-              color="white"
+              color="#a5f3fc"
             ></l-trefoil>
             <a href="/" className="text-white text-2xl font-bold">
               DevPortfolio
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-white hover:text-cyan-200 relative group"
+                    className="text-white hover: relative group"
                   >
                     {item}
                     <span className="absolute left-0 bottom-0 w-full h-0.5 bg-cyan-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>

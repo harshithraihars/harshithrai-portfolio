@@ -1,6 +1,7 @@
 import { FaCode, FaMobileAlt } from "react-icons/fa";
 import React from "react";
 import AnimateOnScroll from "./AnimateScroll";
+import Skills from "./Skills";
 
 // Define the SkillCardProps interface
 interface SkillCardProps {
@@ -28,45 +29,52 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <AnimateOnScroll>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center animate-fade-in-up">
               About Me
             </h2>
           </AnimateOnScroll>
-          
-          <AnimateOnScroll delay={100}>
-            <div className="bg-black bg-opacity-10 backdrop-blur-md rounded-lg p-8 shadow-xl">
-              <p className="text-white text-lg mb-6">
-                With over 2 years of experience in the field, I am a creative web
-                developer passionate about building interactive and functional web
-                experiences. I enjoy transforming ideas into visually appealing
-                and user-friendly applications while staying curious and
-                innovative to deliver impactful digital solutions.
-              </p>
-              <p className="text-white text-lg mb-8">
-                My expertise spans across various platforms and technologies,
-                allowing me to offer comprehensive solutions tailored to each
-                project's unique needs.
-              </p>
+          <div className="animation-box">
+            <div className="bg-black bg-opacity-10 backdrop-blur-md rounded-lg p-8 shadow-xl animate-fade-in-up animation-delay-200">
+              <AnimateOnScroll delay={100}>
+                <div>
+                  <p className="text-white text-lg mb-6">
+                    With over 2 years of experience in the field, I am a
+                    creative web developer passionate about building interactive
+                    and functional web experiences. I enjoy transforming ideas
+                    into visually appealing and user-friendly applications while
+                    staying curious and innovative to deliver impactful digital
+                    solutions.
+                  </p>
+                  <p className="text-white text-lg mb-8">
+                    My expertise spans across various platforms and
+                    technologies, allowing me to offer comprehensive solutions
+                    tailored to each project's unique needs.
+                  </p>
+                </div>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={200}>
+                <div className="grid grid-cols-2 gap-6 w-full">
+                  <SkillCard
+                    icon={<FaCode className="w-8 h-8" />}
+                    title="Web Development"
+                    description="Custom web applications using modern frameworks and technologies"
+                  />
+                  <SkillCard
+                    icon={<FaMobileAlt className="w-8 h-8" />}
+                    title="App Development"
+                    description="Building user-friendly Mobile applications with modern technologies"
+                  />
+                </div>
+              </AnimateOnScroll>
             </div>
-          </AnimateOnScroll>
-          
-          <AnimateOnScroll delay={200}>
-            <div className="grid grid-cols-2 gap-6 w-full mt-6">
-              <SkillCard
-                icon={<FaCode className="w-8 h-8" />}
-                title="Web Development"
-                description="Custom web applications using modern frameworks and technologies"
-              />
-              {/* <TechStack/> */}
-              <SkillCard
-                icon={<FaMobileAlt className="w-8 h-8" />}
-                title="App Development"
-                description="Building user-friendly Mobile applications with modern technologies"
-              />
-            </div>
-          </AnimateOnScroll>
+          </div>
         </div>
       </div>
+      <AnimateOnScroll delay={100}>
+        <div className="flex justify-center">
+          <Skills />
+        </div>
+      </AnimateOnScroll>
     </section>
   );
 }
