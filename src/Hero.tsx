@@ -86,13 +86,13 @@ export default function HeroSection() {
           </div>
 
           <div className="sm:hidden"></div>
-          <div className="hidden sm:block sm:absolute sm:right-0 lg:-right-8">
-            <ul className="flex space-x-6">
+          <div className="hidden sm:block sm:absolute sm:right-0 lg:right-10">
+            <ul className="flex space-x-8">
               {menuItems.map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => scrollToSection(item.toLowerCase())}
-                    className="text-white hover: relative group"
+                    className="text-white hover: relative group text-xl z-20"
                   >
                     {item}
                     <span className="absolute left-0 bottom-0 w-full h-0.5 bg-cyan-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
