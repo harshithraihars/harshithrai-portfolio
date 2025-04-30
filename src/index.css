@@ -173,3 +173,7 @@ body {
 .translate-y-16 {
   transform: translateY(4rem);
 }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -67,7 +67,7 @@ export default function HeroSection() {
   return (
     <div
       id="home"
-      className="min-h-screen bg-gradient-to-br from-black via-black"
+      className="min-h-screen bg-gradient-to-br from-black via-black px-0 md:px-20"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 box-border">
         <nav className="fixed top-0 left-4 right-12 z-50 bg-transparent backdrop-blur-sm flex justify-between items-center p-4 sm:p-9">
