@@ -38,17 +38,10 @@ export default function AboutSection() {
               <AnimateOnScroll delay={100}>
                 <div>
                   <p className="text-white text-lg mb-6">
-                    With over 2 years of experience in the field, I am a
-                    creative web developer passionate about building interactive
-                    and functional web experiences. I enjoy transforming ideas
-                    into visually appealing and user-friendly applications while
-                    staying curious and innovative to deliver impactful digital
-                    solutions.
+                  With over 2 years of experience in web development, I specialize in building end-to-end web applications that are robust, scalable, and maintainable. I’m driven by a passion for solving complex problems through clean architecture and efficient logic, while ensuring a smooth and intuitive user experience on the frontend.
                   </p>
                   <p className="text-white text-lg mb-8">
-                    My expertise spans across various platforms and
-                    technologies, allowing me to offer comprehensive solutions
-                    tailored to each project's unique needs.
+                  My expertise spans a diverse range of technologies and platforms, enabling me to deliver well-rounded, scalable solutions tailored to the specific requirements of each project.
                   </p>
                 </div>
               </AnimateOnScroll>

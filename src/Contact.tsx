@@ -102,19 +102,21 @@ export default function ContactSection() {
                     >
                       <FaLinkedin size={24} />
                     </a>
-                    <a
+                    {/* <a
                       href="https://www.instagram.com/rai_harsu_"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white hover:text-cyan-300 transition-colors duration-300 glow-effect"
                     >
                       <FaInstagram size={24} />
-                    </a>
+                    </a> */}
                   </div>
                   <div className="mt-4">
+                    <a href="/Harshith.pdf" download="Harshith_Resume.pdf">
                     <button className="px-3 py-1 bg-[#1E90FF] text-white text-sm rounded-md shadow-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#1C86EE] hover:shadow-lg flex items-center">
                       <FaDownload className="mr-1" size={12} /> Get my Resume
                     </button>
+                    </a>
                   </div>
                 </div>
                 
@@ -206,9 +208,7 @@ export default function ContactSection() {
               <div className="mb-4 md:mb-0">
                 <h3 className="text-2xl font-bold text-white">Harshith Rai</h3>
                 <p className="text-cyan-100 mt-1 max-w-2xl">
-                  A Frontend focused Web Developer building the Frontend of
-                  Websites and Web Applications that leads to the success of the
-                  overall product.
+                A Full Stack Web Developer passionate about building robust web applications with a strong focus on performance, scalability, and clean architecture — ensuring both the frontend experience and the underlying logic work seamlessly together.
                 </p>
               </div>
               <nav>

@@ -18,7 +18,7 @@ const projects: Project[] = [
     type: "web",
     description:
       "A social media platform for connecting, sharing, and engaging with others.",
-    link: "/",
+    link: "https://github.com/harshithraihars/social-media",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const projects: Project[] = [
     type: "web",
     description:
       "A Chrome extension for tracking product prices and deals on Flipkart.",
-    link: "/",
+    link: "https://github.com/harshithraihars/Alertify",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const projects: Project[] = [
     type: "web",
     description:
       "A typing practice tool to help users improve their typing speed and accuracy through interactive challenges and real-time feedback.",
-    link: "/",
+    link: "https://github.com/harshithraihars/typing-speed",
   },
 ];
 
