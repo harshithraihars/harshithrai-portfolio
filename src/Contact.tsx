@@ -3,7 +3,6 @@ import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaInstagram,
   FaDownload,
 } from "react-icons/fa";
 import AnimateOnScroll from "./AnimateScroll";
