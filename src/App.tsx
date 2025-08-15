@@ -1,5 +1,5 @@
 // App.tsx
-import React, { useState, useEffect } from "react";
+import{ useState, useEffect } from "react";
 import HeroSection from "./Hero";
 import AboutSection from "./About";
 import ProjectSection from "./Project";
