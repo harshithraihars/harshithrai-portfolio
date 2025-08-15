@@ -2,7 +2,7 @@
 
 🚀 **Welcome to my professional web developer portfolio!**
 
-🌐 [Live Demo](https://harshithraiportfolio.vercel.app/)
+🌐 [Live Demo](https://harshithrai.vercel.app/)
 
 ## 📌 About
 I am a **Full Stack Web Developer** with over **3 years of experience** specializing in building interactive and responsive web applications. This portfolio showcases my expertise in modern web technologies and design principles.
