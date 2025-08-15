@@ -52,7 +52,7 @@ export default function ContactSection() {
 
   return (
     <section
-      // id="contact"
+      id="contact"
       className="py-20 bg-gradient-to-bl from-white via-black to-black"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +111,7 @@ export default function ContactSection() {
                     </a> */}
                   </div>
                   <div className="mt-4">
-                    <a href="/Harshith.pdf" download="Harshith_Resume.pdf">
+                    <a href="/HarshithRai.pdf" download="HarshithRai.pdf">
                     <button className="px-3 py-1 bg-[#1E90FF] text-white text-sm rounded-md shadow-md transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#1C86EE] hover:shadow-lg flex items-center">
                       <FaDownload className="mr-1" size={12} /> Get my Resume
                     </button>

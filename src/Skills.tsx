@@ -2,7 +2,7 @@ import firebase from "/firebase-svgrepo-com.svg";
 import mongodb from "/mongo-svgrepo-com.svg";
 import express from "/express-svgrepo-com.svg";
 import node from "/nodejs-icon-logo-svgrepo-com.svg";
-import fastapi from "/nextjs-icon-svgrepo-com.svg";
+import nextjs from "/nextjs-icon-svgrepo-com.svg";
 import java from "/java-svgrepo-com.svg";
 import mysql from "/mysql-svgrepo-com.svg";
 import postman from "/postman-icon-svgrepo-com.svg";
@@ -33,7 +33,7 @@ const skills = [
   },
   { name: "Node.js", imgSrc: node },
   { name: "Express.js", imgSrc: express },
-  { name: "FastAPI", imgSrc: fastapi },
+  { name: "NextJs", imgSrc: nextjs },
   { name: "Firebase", imgSrc: firebase },
   { name: "MongoDB", imgSrc: mongodb },
   { name: "MySQL", imgSrc: mysql },
@@ -77,7 +77,7 @@ const Skills = () => {
               src={imgSrc}
               alt={name}
               className={`w-14 h-14 object-contain transition-transform duration-300 group-hover:opacity-30 ${
-                name === "FastAPI" || name === "Express.js"
+                name === "NextJs" || name === "Express.js"
                   ? "bg-white p-1 rounded-md"
                   : ""
               }`}

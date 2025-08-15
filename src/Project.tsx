@@ -14,10 +14,10 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Social Media Application",
+    title: "Guildly",
     type: "web",
     description:
-      "A social media platform for connecting, sharing, and engaging with others.",
+      "A Social Media platform with mentorship booking, WebRTC video calls, and role-based user access.",
     link: "https://github.com/harshithraihars/social-media",
   },
   {
@@ -25,16 +25,16 @@ const projects: Project[] = [
     title: "Alertify",
     type: "web",
     description:
-      "A Chrome extension for tracking product prices and deals on Flipkart.",
+      "A real-time price tracker for Flipkart that monitors product prices and sends alerts on drops via a Chrome extension.",
     link: "https://github.com/harshithraihars/Alertify",
   },
   {
     id: 3,
-    title: "TypeSpeed",
+    title: "HealthCare App",
     type: "web",
     description:
-      "A typing practice tool to help users improve their typing speed and accuracy through interactive challenges and real-time feedback.",
-    link: "https://github.com/harshithraihars/typing-speed",
+      "A real-time healthcare platform with doctor-patient chat, specialization-based matching, and role-based access control.",
+    link: "https://github.com/harshithraihars/doctor-chat",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function ProjectSection() {
 
           <AnimateOnScroll delay={projects.length * 100}>
             <div
-              className="bg-red bg-opacity-10 backdrop-blur-md rounded-lg p-6 shadow-xl transition-all duration-300 hover:bg-opacity-20"
+              className="bg-red bg-opacity-10 backdrop-blur-md rounded-lg p-6 shadow-xl transition-all duration-300 hover:bg-opacity-20 hover:scale-105"
               style={{
                 boxShadow: "0px 10px 30px rgba(255, 255, 255, 0.2)", // White shadow
               }}
@@ -132,7 +132,7 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div
-      className="bg-red bg-opacity-10 backdrop-blur-md rounded-lg p-6 shadow-xl transition-all duration-300 hover:bg-opacity-20"
+      className="bg-red bg-opacity-10 backdrop-blur-md rounded-lg p-6 shadow-xl transition-all duration-300 hover:bg-opacity-20 hover:scale-105"
       style={{
         boxShadow: "0px 10px 30px rgba(255, 255, 255, 0.2)", // White shadow
       }}
